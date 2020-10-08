@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+
+  demo:
+    stdin_open: true
+    container_name: demo
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - './:/app'
+      - '/app/node_modules'
+    ports:
+      - 3000:3000
